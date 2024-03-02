@@ -8,28 +8,31 @@
 </head>
 <body>
     <h1>Drawing Program</h1>
+    <canvas id="imgCanvas" width="600" height="400"
+    onclick="draw(event)" style="background-color: rgb(224, 200, 200);"
     
 
     <!-- <script src="script.js"> -->
-        <script>
-            function draw(event) {
-                let canvas = document.getElementById("imgCanvas");
-                let ctx = canvas.getContext("2d");
-                let rect = canvas.getBoundingClientRect();
+    <script>
+        function draw(event) {
+            let canvas = document.getElementById("imgCanvas");
+            let ctx = canvas.getContext("2d");
+            let rect = canvas.getBoundingClientRect();
    
-                let posX = event.clientX - rect.left;
-                let posY = event.clientY - rect.top;
+            let posX = event.clientX - rect.left;
+            let posY = event.clientY - rect.top;
    
-                //"#f00"
-                ctx.fillStyle = "#ff0000";
+            //"#f00"
+            ctx.fillStyle = "#ff0000";
+            ctx.strokeStyle = "#000000"
    
-                ctx.beginPath();
+            ctx.beginPath();
    
-                ctx.arc(posX, posY, 50, 0, 2 * Math.PI);
+            ctx.arc(posX, posY, 50, 0, 2 * Math.PI);
    
-                ctx.fill();
-            }
-   
+            ctx.fill();
+            ctx.stroke();
+        }
         </script>
 </body>
 </html>
