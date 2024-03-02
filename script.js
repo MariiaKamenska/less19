@@ -1,3 +1,4 @@
+<canvas id="imgCanvas" width="600" height="400" onclick="draw(event)"></canvas>
 function draw(event) {
     let canvas = document.getElementById("imgCanvas");
     let ctx = canvas.getContext("2d");
